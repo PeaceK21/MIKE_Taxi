@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="510" height="896" viewBox="0 0 510 896">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="414" height="896" transform="translate(0 -198)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_9645" data-name="Group 9645" transform="translate(0 86)">
+    <g id="Background_Mask" data-name="Background Mask" transform="translate(0 112)" clip-path="url(#clip-path)">
+      <path id="Background" d="M285.313,278.36c0-72.936-571.284-62.111-367.653-392.068s601.988-395.571,705.1-97.973S1050.01-8.106,1050.01-162.617V278.36Z" transform="translate(541.787 -2) rotate(180)" fill="#ecf311"/>
+    </g>
+    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(318 370)" fill="#ecf311" stroke="#ecf311" stroke-width="1">
+      <ellipse cx="96" cy="90.5" rx="96" ry="90.5" stroke="none"/>
+      <ellipse cx="96" cy="90.5" rx="95.5" ry="90" fill="none"/>
+    </g>
+  </g>
+</svg>
