@@ -6,6 +6,10 @@ export default function fontLoad() {
     PoppinsMedium: require("./assets/fonts/Poppins-Medium.ttf"),
   });
 
+  if (!loaded) {
+    return null;
+  }
+
   return null;
 }
 
