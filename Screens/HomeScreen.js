@@ -1,12 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
 import MapView, { Marker } from "react-native-maps";
 import tw from "tailwind-react-native-classnames";
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
-import { Avatar, Card, Icon } from "react-native-elements";
-import { globalStyle } from "../globalStyles";
+import { Avatar } from "react-native-elements";
 import { LinearGradient } from "expo-linear-gradient";
-import { GOOGLE_MAPS_APIKEY } from "@env";
+import LocationInputComponent from "../Components/LocationInputComponent";
 
 const HomeScreen = () => {
   // TODO : Change map style as per future requirements
@@ -206,15 +204,6 @@ const HomeScreen = () => {
     },
   ];
 
-  const homePlace = {
-    description: "Home",
-    geometry: { location: { lat: 48.8152937, lng: 2.4597668 } },
-  };
-  const workPlace = {
-    description: "Work",
-    geometry: { location: { lat: 48.8496818, lng: 2.2940881 } },
-  };
-
   return (
     <View style={tw`flex-1 relative`}>
       {/* View for Map - absolute and behind other UI contents */}
@@ -283,42 +272,9 @@ const HomeScreen = () => {
           </View>
 
           <View
-            style={tw`flex-row mx-6 rounded-xl  shadow-2xl items-center overflow-hidden justify-center bg-white`}
+            style={tw`flex-row mx-6 rounded-xl shadow-2xl items-center overflow-hidden justify-center bg-white`}
           >
-            <GooglePlacesAutocomplete
-              placeholder="Search for a destination"
-              styles={toInputBoxStyles}
-              nearbyPlacesAPI="GooglePlacesSearch"
-              debounce={400}
-              fetchDetails={true}
-              returnKeyType={"search"}
-              minLength={2}
-              onPress={(data, details = null) => {
-                dispatch(
-                  setDestination({
-                    location: details.geometry.location,
-                    description: data.description,
-                  })
-                );
-                console.log("navigation function");
-                navigation.navigate("RideOptionsCard");
-              }}
-              enablePoweredByContainer={false}
-              query={{
-                key: GOOGLE_MAPS_APIKEY,
-                language: "en",
-              }}
-              predefinedPlaces={[homePlace, workPlace]}
-            />
-            <Icon
-              style={tw`w-12 bg-blue-300`}
-              name="search-location"
-              type="font-awesome-5"
-              color="gray"
-              size={20}
-            />
-
-            {/* Add loop for history icons for predefined places  */}
+            <LocationInputComponent />
           </View>
         </LinearGradient>
       </View>
@@ -327,24 +283,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-
-const toInputBoxStyles = StyleSheet.create({
-  container: {
-    backgroundColor: "white",
-    paddingTop: 12,
-    flex: 1,
-  },
-  textInput: {
-    backgroundColor: "white",
-    borderRadius: 1,
-    fontSize: 18,
-    color: "black",
-  },
-  textInputContainer: {
-    paddingHorizontal: 10,
-    paddingBottom: 5,
-  },
-  predefinedPlacesDescription: {
-    color: "gray",
-  },
-});
