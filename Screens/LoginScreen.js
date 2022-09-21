@@ -210,20 +210,18 @@ const LoginScreen = () => {
           }}
         >
           <Stack.Navigator
-            initialRouteName="LoginByphone"
+            initialRouteName="LoginOTP"
             screenOptions={{
               headerShown: false,
             }}
           >
             <Stack.Screen
-              // style={tw`bg-transparent`}
               name="LoginByPhone"
               component={LoginByPhoneComponent}
             />
             <Stack.Screen name="LoginOTP" component={LoginOTPComponent} />
           </Stack.Navigator>
         </NavigationContainer>
-        {/* <LoginByPhoneComponent /> */}
       </View>
     </View>
   );

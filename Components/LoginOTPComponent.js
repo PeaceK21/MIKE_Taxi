@@ -1,26 +1,6 @@
-import {
-  Image,
-  Platform,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-} from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import tw from "tailwind-react-native-classnames";
-import Svg, {
-  Ellipse,
-  Circle,
-  Path,
-  Rect,
-  G,
-  Defs,
-  ClipPath,
-} from "react-native-svg";
-import { Picker } from "@react-native-picker/picker";
-import { useFonts } from "expo-font";
 import { globalStyle } from "../globalStyles";
-import CountryPicker from "react-native-country-picker-modal";
 import { useState, useEffect } from "react";
 import OTPInputView from "@twotalltotems/react-native-otp-input";
 
@@ -55,6 +35,7 @@ const LoginOTPComponent = () => {
           onCodeFilled={(code) => {
             console.log(`Code is ${code}, you are good to go!`);
           }}
+          placeholderTextColor={"red"}
         />
       </View>
 

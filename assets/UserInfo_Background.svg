@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="896" viewBox="0 0 414 896">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="414" height="896" transform="translate(0 -476)" fill="#ecf311"/>
+    </clipPath>
+  </defs>
+  <g id="Background_Mask" data-name="Background Mask" transform="translate(0 476)" clip-path="url(#clip-path)">
+    <path id="Background" d="M285.313,278.36c0-72.936-571.284-62.111-367.653-392.068s601.988-395.571,705.1-97.973S1050.01-8.106,1050.01-162.617V278.36Z" transform="translate(541.787 -280) rotate(180)" fill="#ecf311"/>
+  </g>
+</svg>
